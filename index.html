@@ -1,44 +1,37 @@
 <!DOCTYPE html>
 <html>
 <head>
-<!--INSERT-BASE-->
-<meta charset='UTF-8'>
-<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no" >
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="description" content="sandbox version of gsimaps">
 <title>sandmaps</title>
 <link rel="shortcut icon" href="favicon.ico">
-<link rel="apple-touch-icon" sizes="152x152"  href="https://avatars1.githubusercontent.com/u/15714839?v=3&s=152">
+<link rel="apple-touch-icon" sizes="152x152" href="https://avatars1.githubusercontent.com/u/15714839?v=3&s=152">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black">
-<link rel="stylesheet" href="leaflet-0.7.3/leaflet.css">
-<link rel="stylesheet" href="jquery/jquery-ui.min.css">
-<link rel="stylesheet"  href="jquery/colorpicker/jquery.simple-color-picker.css"/>
-<link rel="stylesheet"  href="leaflet-plugin/leaflet.label/leaflet.label-gsi.css"/>
-<link rel="stylesheet"  href="leaflet-plugin/leaflet.draw/leaflet.draw-gsi.css"/>
-<link rel="stylesheet" href="css/gsimaps.css"/>
-<script src="leaflet-0.7.3/leaflet-src.js"></script>
-<script src="jquery/jquery-1.11.1.min.js"></script>
-<script src="jquery/ZeroClipboard2.0.2/ZeroClipboard.js"></script>
-<script src="jquery/jquery.xdomainrequest.min.js"></script>
-<script src="jquery/jquery-ui.min.js"></script>
-<script src="jquery/jquery.ui.touch-punch.js"></script>
-<script src="jquery/colorpicker/jquery.simple-color-picker.js"></script>
-<script src="jquery/ah-placeholder/jquery.ah-placeholder.js"></script>
-<script src="js/proj4js-combined.js"></script>
-<script src="leaflet-plugin/leaflet.label/leaflet.label.js"></script>
-<script src="leaflet-plugin/TileLayer.GeoJSON/TileLayer.GeoJSON-gsi.js"></script>
-<script src="leaflet-plugin/leaflet-omnivore/leaflet-omnivore.min.js"></script>
-<script src="leaflet-plugin/leaflet.draw/leaflet.draw-gsi.js"></script>
-<script src="leaflet-plugin/leaflet-hash/leaflet-hash-gsi.js"></script>
-<script src="js/gsimaps.min.js"></script>
-<!-- ここから地図共有時使用 ※変更・削除しないでください -->
-<script type="text/javascript">
-/*INSERT-SCRIPT*/
-</script>
-<!-- ここまで地図共有時使用 -->
+<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet/v1.0.0-beta.2/leaflet.css" />
+<link rel="stylesheet" href="css/gsimaps.css" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/zepto/1.1.6/zepto.min.js"></script>
+<script src="http://cdn.leafletjs.com/leaflet/v1.0.0-beta.2/leaflet.js"></script>
 </head>
 <body>
-<div id="map"></div>
+ <div id="map"></div>
+ <div id="menu">
+  <ul>
+   <li class="close"><a href="#" class="toggle">Layers</a>
+    <ul>
+     <li><a href="#" class="toggle">背景地図</a>
+      <ul data-layers="http://maps.gsi.go.jp/layers_txt/layers0.txt"></ul></li>
+     <li data-layers="http://maps.gsi.go.jp/layers_txt/layers1.txt"></li>
+     <li data-layers="http://maps.gsi.go.jp/layers_txt/layers2.txt"></li>
+     <li data-layers="http://maps.gsi.go.jp/layers_txt/layers3.txt"></li>
+     <li data-layers="http://maps.gsi.go.jp/layers_txt/layers4.txt"></li>
+     <li data-layers="http://maps.gsi.go.jp/layers_txt/layers_experimental.txt"></li>
+     <li data-layers="http://smellman.github.io/gsimaps/layers_txt/osm_layer.txt"></li>
+    </ul></li>
+  </ul>
+ </div>
+ <script src="js/gsimaps.min.js"></script>
 </body>
 </html>
